@@ -1,7 +1,0 @@
-{
-  "scripts": {
-    "dokku": {
-      "predeploy": "npm run frontend && npm prune --production && npm cache clean --force"
-    }
-  }
-}
