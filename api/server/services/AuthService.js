@@ -17,6 +17,9 @@ const { hashToken } = require('~/server/utils/crypto');
 const isDomainAllowed = require('./isDomainAllowed');
 const { logger } = require('~/config');
 
+// Importação do modelo de Transação
+const { Transaction } = require('~/models/Transaction');
+
 const domains = {
   client: process.env.DOMAIN_CLIENT,
   server: process.env.DOMAIN_SERVER,
@@ -24,6 +27,34 @@ const domains = {
 
 const isProduction = process.env.NODE_ENV === 'production';
 const genericVerificationMessage = 'Please check your email to verify your email address.';
+
+/**
+ * Jogajunto Fix
+ */
+const initialAmount = process.env.INITIAL_AMOUNT || 1000;
+
+/**
+ * Jogajunto Fix - Add initial credits after register
+ */
+const addInitialCredits = async (userId) => {
+  try {
+    const result = await Transaction.create({
+      user: userId,
+      tokenType: 'credits',
+      context: 'admin',
+      rawAmount: +initialAmount,
+    });
+
+    if (!result?.balance) {
+      console.red('Failed to update balance');
+    }
+
+    logger.info(`Balance added successfully for user: ${userId}`);
+  } catch (error) {
+    logger.error('Error while adding initial credits: ' + error.message);
+    throw error;
+  }
+};
 
 /**
  * Logout user
@@ -199,6 +230,11 @@ const registerUser = async (user, additionalData = {}) => {
     } else {
       await updateUser(newUserId, { emailVerified: true });
     }
+
+    /**
+     * Jogajunto Fix
+     */
+    await addInitialCredits(newUserId);
 
     return { status: 200, message: genericVerificationMessage };
   } catch (err) {
