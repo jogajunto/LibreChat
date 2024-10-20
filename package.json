@@ -8,7 +8,7 @@
     "packages/*"
   ],
   "scripts": {
-    "prestart": "touch .env && mkdir -p /app/client/public/images /app/api/logs && npm run frontend && npm prune --production && npm cache clean --force",
+    "prestart": "npm run frontend && npm prune --production && npm cache clean --force",
     "start": "npm run backend",
     "update": "node config/update.js",
     "add-balance": "node config/add-balance.js",
