@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "predeploy": "npm run frontend && npm prune --production && npm cache clean --force",
+    "postdeploy": "npm run backend"
+  },
+  "env": {
+    "HOST": "0.0.0.0",
+    "PORT": "3080",
+    "NODE_ENV": "production"
+  }
+}
