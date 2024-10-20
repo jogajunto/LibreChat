@@ -10,8 +10,9 @@ services:
       - "${PORT}:${PORT}"
     depends_on:
       - mongodb
-      - rag_api
-    image: ghcr.io/danny-avila/librechat-dev:latest
+      # - rag_api
+    # image: ghcr.io/danny-avila/librechat-dev:latest
+    build: .
     restart: always
     user: "${UID}:${GID}"
     extra_hosts:
