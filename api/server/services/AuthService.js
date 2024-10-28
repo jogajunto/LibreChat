@@ -107,7 +107,7 @@ const sendVerificationEmail = async (user) => {
   }/verify?token=${verifyToken}&email=${encodeURIComponent(user.email)}`;
   await sendEmail({
     email: user.email,
-    subject: 'Verify your email',
+    subject: 'Verifique seu e-mail',
     payload: {
       appName: process.env.APP_TITLE || 'LibreChat',
       name: user.name,
@@ -283,7 +283,7 @@ const requestPasswordReset = async (req) => {
   if (emailEnabled) {
     await sendEmail({
       email: user.email,
-      subject: 'Password Reset Request',
+      subject: 'Solicitação de Redefinição de Senha',
       payload: {
         appName: process.env.APP_TITLE || 'LibreChat',
         name: user.name,
@@ -336,7 +336,7 @@ const resetPassword = async (userId, token, password) => {
   if (checkEmailConfig()) {
     await sendEmail({
       email: user.email,
-      subject: 'Password Reset Successfully',
+      subject: 'Senha Redefinida com Sucesso',
       payload: {
         appName: process.env.APP_TITLE || 'LibreChat',
         name: user.name,
@@ -418,7 +418,7 @@ const resendVerificationEmail = async (req) => {
 
     await sendEmail({
       email: user.email,
-      subject: 'Verify your email',
+      subject: 'Verifique seu e-mail',
       payload: {
         appName: process.env.APP_TITLE || 'LibreChat',
         name: user.name,
