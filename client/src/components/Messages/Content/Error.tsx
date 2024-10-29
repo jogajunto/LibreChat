@@ -72,7 +72,7 @@ const errorMessages = {
   },
   token_balance: (json: TTokenBalance) => {
     const { balance, tokenCost, promptTokens, generations } = json;
-    const message = `Insufficient Funds! Balance: ${balance}. Prompt tokens: ${promptTokens}. Cost: ${tokenCost}.`;
+    const message = `Créditos insuficientes! Entre em contato com a nossa central de ajuda ia@otminteligencia.com.br. Créditos: ${balance}. Prompt tokens: ${promptTokens}. Custo: ${tokenCost}.`;
     return (
       <>
         {message}
