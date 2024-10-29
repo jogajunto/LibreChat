@@ -448,7 +448,7 @@ export default {
   com_endpoint_bing_system_message_placeholder:
     'AVISO: O uso indevido deste recurso pode resultar em BANIMENTO do uso do Bing! Clique em "Mensagem do Sistema" para instruções completas e a mensagem padrão se omitida, que é o preset "Sydney" considerado seguro.',
   com_endpoint_system_message: 'Mensagem do Sistema',
-  com_endpoint_message: 'Mensagem',
+  com_endpoint_message: 'Enviar mensagem para a',
   com_endpoint_message_not_appendable: 'Edite sua mensagem ou Regenerar.',
   com_endpoint_default_blank: 'padrão: em branco',
   com_endpoint_default_false: 'padrão: falso',
