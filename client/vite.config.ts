@@ -68,8 +68,8 @@ export default defineConfig({
         short_name: 'Acervo Digital - OTM',
         start_url: '/',
         display: 'standalone',
-        background_color: '#000000',
-        theme_color: '#009688',
+        background_color: '#f48120',
+        theme_color: '#f48120',
         icons: [
           {
             src: '/assets/favicon-32x32.png',
