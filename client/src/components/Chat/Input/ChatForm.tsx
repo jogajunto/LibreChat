@@ -189,7 +189,7 @@ const ChatForm = ({ index = 0 }) => {
                 />
               )}
             </FileFormWrapper>
-            {SpeechToText && (
+            {/* {SpeechToText && (
               <AudioRecorder
                 disabled={!!disableInputs}
                 textAreaRef={textAreaRef}
@@ -198,7 +198,7 @@ const ChatForm = ({ index = 0 }) => {
                 methods={methods}
               />
             )}
-            {TextToSpeech && automaticPlayback && <StreamAudio index={index} />}
+            {TextToSpeech && automaticPlayback && <StreamAudio index={index} />} */}
           </div>
           <div
             className={cn(

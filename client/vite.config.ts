@@ -64,8 +64,8 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
       },
       manifest: {
-        name: 'Acervo Digital - OTM',
-        short_name: 'Acervo Digital - OTM',
+        name: 'IA do Transporte',
+        short_name: 'IA do Transporte',
         start_url: '/',
         display: 'standalone',
         background_color: '#f48120',
