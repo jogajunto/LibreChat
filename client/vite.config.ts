@@ -64,8 +64,8 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
       },
       manifest: {
-        name: 'IA do Transporte',
-        short_name: 'IA do Transporte',
+        name: 'I.A. do Transporte',
+        short_name: 'I.A. do Transporte',
         start_url: '/',
         display: 'standalone',
         background_color: '#f48120',
