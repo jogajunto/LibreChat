@@ -186,7 +186,7 @@ export default function Settings({ open, onOpenChange }: TDialogProps) {
                     <Tabs.Content value={SettingsTabValues.CHAT}>
                       <Chat />
                     </Tabs.Content>
-                    <Tabs.Content value={SettingsTabValues.BETA}>
+                    {/* <Tabs.Content value={SettingsTabValues.BETA}>
                       <Beta />
                     </Tabs.Content>
                     <Tabs.Content value={SettingsTabValues.COMMANDS}>
@@ -194,7 +194,7 @@ export default function Settings({ open, onOpenChange }: TDialogProps) {
                     </Tabs.Content>
                     <Tabs.Content value={SettingsTabValues.SPEECH}>
                       <Speech />
-                    </Tabs.Content>
+                    </Tabs.Content> */}
                     <Tabs.Content value={SettingsTabValues.DATA}>
                       <Data />
                     </Tabs.Content>
