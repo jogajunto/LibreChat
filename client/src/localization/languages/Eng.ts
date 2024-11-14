@@ -438,7 +438,7 @@ export default {
   com_auth_already_have_account: 'Already have an account?',
   com_auth_login: 'Login',
   com_auth_registration_success_insecure: 'Registration successful.',
-  com_auth_registration_success_generic: 'Please check your email to verify your email address.',
+  com_auth_registration_success_generic: 'Please log in to access your account, as your registration has already been completed.',
   com_auth_reset_password: 'Reset your password',
   com_auth_click: 'Click',
   com_auth_here: 'HERE',

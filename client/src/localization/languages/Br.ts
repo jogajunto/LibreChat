@@ -409,7 +409,7 @@ export default {
   com_auth_login: 'Entrar',
   com_auth_registration_success_insecure: 'Registro bem-sucedido.',
   com_auth_registration_success_generic:
-    'Por favor, verifique seu e-mail para verificar seu endereço de e-mail.',
+    'Por favor, faça login para acessar sua conta, pois seu cadastro já foi realizado.',
   com_auth_reset_password: 'Redefinir sua senha',
   com_auth_click: 'Clique',
   com_auth_here: 'AQUI',

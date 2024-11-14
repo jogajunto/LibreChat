@@ -916,7 +916,7 @@ export default {
     'Su cuenta no ha sido verificada. Por favor, revise su correo electrónico para encontrar el enlace de verificación.',
 
   com_auth_registration_success_generic:
-    'Por favor, revise su correo electrónico para verificar su dirección.',
+    'Por favor, inicie sesión para acceder a su cuenta, ya que su registro ya ha sido completado.',
 
   com_auth_registration_success_insecure: 'Registro completado exitosamente.',
 
