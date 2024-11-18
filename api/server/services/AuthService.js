@@ -222,7 +222,7 @@ const registerUser = async (user, additionalData = {}) => {
     const disableTTL = isEnabled(process.env.ALLOW_UNVERIFIED_EMAIL_LOGIN);
     const newUser = await createUser(newUserData, disableTTL, true);
     newUserId = newUser._id;
-    if (emailEnabled && !newUser.emailVerified) {
+    if (emailEnabled && !newUser.emailVerified && !disableTTL) {
       await sendVerificationEmail({
         _id: newUserId,
         email,
