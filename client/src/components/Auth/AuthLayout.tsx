@@ -60,7 +60,7 @@ function AuthLayout({
       <Banner />
       <BlinkAnimation active={isFetching}>
         <div className="mt-6 h-10 w-full bg-cover">
-          <a href={process.env.REACT_APP_LP_LINK}>
+          <a href={startupConfig?.customSettings?.landingPageUrl || '../'}>
             <img src="/assets/logo.svg" className="h-full w-full object-contain" alt="Logo" />
           </a>
         </div>
